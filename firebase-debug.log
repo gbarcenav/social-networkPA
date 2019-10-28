@@ -1,0 +1,21 @@
+[debug] [2019-10-28T19:34:12.224Z] ----------------------------------------------------------------------
+[debug] [2019-10-28T19:34:12.228Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2019-10-28T19:34:12.228Z] CLI Version:   7.6.1
+[debug] [2019-10-28T19:34:12.228Z] Platform:      darwin
+[debug] [2019-10-28T19:34:12.228Z] Node Version:  v10.16.3
+[debug] [2019-10-28T19:34:12.230Z] Time:          Mon Oct 28 2019 13:34:12 GMT-0600 (GMT-06:00)
+[debug] [2019-10-28T19:34:12.230Z] ----------------------------------------------------------------------
+[debug] [2019-10-28T19:34:12.230Z] 
+[debug] [2019-10-28T19:34:12.240Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-28T19:34:12.240Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/gabrielabarcena/bootcamp/social-network
+
