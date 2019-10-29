@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
 import Home from "./views/Home/Welcome";
-import Registry from "./views/Registry";
+import Registry from "./views/Registry/Registry";
 import Login from "./views/Login";
 import Feed from "./views/Feed";
 import Profile from "./views/Profile";
@@ -13,13 +13,13 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route path="/registry" Route={Registry} />
+          <Route path="/registry" component={Registry} />
 
-          <Route path="/login" Route={Login} />
+          <Route path="/login" component={Login} />
 
-          <Route path="/feed" Route={Feed} />
+          <Route path="/feed" component={Feed} />
 
-          <Route path="/profile" Route={Profile} />
+          <Route path="/profile" component={Profile} />
 
           <Route exact path="/" component={Home} />
         </Switch>
