@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/gbarcenav/social-networkPA.git/static/css/main.b8563b82.chunk.css",
+    "main.js": "/gbarcenav/social-networkPA.git/static/js/main.b3c91b90.chunk.js",
+    "main.js.map": "/gbarcenav/social-networkPA.git/static/js/main.b3c91b90.chunk.js.map",
+    "runtime-main.js": "/gbarcenav/social-networkPA.git/static/js/runtime-main.f7f5503b.js",
+    "runtime-main.js.map": "/gbarcenav/social-networkPA.git/static/js/runtime-main.f7f5503b.js.map",
+    "static/js/2.29471e96.chunk.js": "/gbarcenav/social-networkPA.git/static/js/2.29471e96.chunk.js",
+    "static/js/2.29471e96.chunk.js.map": "/gbarcenav/social-networkPA.git/static/js/2.29471e96.chunk.js.map",
+    "index.html": "/gbarcenav/social-networkPA.git/index.html",
+    "precache-manifest.256c6810921daf07831416df2597d673.js": "/gbarcenav/social-networkPA.git/precache-manifest.256c6810921daf07831416df2597d673.js",
+    "service-worker.js": "/gbarcenav/social-networkPA.git/service-worker.js",
+    "static/css/main.b8563b82.chunk.css.map": "/gbarcenav/social-networkPA.git/static/css/main.b8563b82.chunk.css.map",
+    "static/media/previous-alt.svg": "/gbarcenav/social-networkPA.git/static/media/previous-alt.667e6e56.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f7f5503b.js",
+    "static/js/2.29471e96.chunk.js",
+    "static/css/main.b8563b82.chunk.css",
+    "static/js/main.b3c91b90.chunk.js"
+  ]
+}
