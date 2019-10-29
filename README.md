@@ -1,4 +1,4 @@
-![](./src/images/logo_mobile.png)
+![](./src/images/readme_logo.png)
 
 # My Style
 
