@@ -1,8 +1,17 @@
 import React, { Component } from "react";
 import { StyleSheet, css } from "aphrodite";
 import Back from "../../images/icons/previous-alt.svg";
+import Google from "../../images/google-plus.svg";
+import Facebook from "../../images/facebook-logo.svg";
 // import Logo from "../../images/logo_mobile.png";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+
+import withFirebaseAuth from "react-with-firebase-auth";
+import * as firebase from "firebase/app";
+import "firebase/auth";
+import firebaseConfig from "../../configuration/firebase";
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 class Registry extends Component {
   constructor(props) {
@@ -18,6 +27,7 @@ class Registry extends Component {
     };
   }
   render() {
+    const { user, signInWithGoogle } = this.props;
     return (
       <section className={css(styles.containerRegistry)}>
         <Link to="/">
@@ -29,6 +39,29 @@ class Registry extends Component {
         <h2 className={css(styles.titlePrincipal)}>Registro</h2>
 
         <div className={css(styles.containerForm)}>
+          {user ? (
+            <Redirect to="/registry" />
+          ) : (
+            <button onClick={signInWithGoogle}>
+              <img
+                className={css(styles.googleButton)}
+                src={Google}
+                alt="Inicio de sesión con Google"
+              />
+            </button>
+          )}
+          {/* {error ? <span> </span> : ''} */}
+
+          <button>
+            <img
+              className={css(styles.facebookButton)}
+              src={Facebook}
+              alt="Inicio de sesión con Facebook"
+            />
+          </button>
+
+          <hr className={css(styles.separationLine)}></hr>
+
           <form className={css(styles.formRegistry)}>
             <input
               type="text"
@@ -100,6 +133,11 @@ class Registry extends Component {
   }
 }
 
+const firebaseAppAuth = firebaseApp.auth();
+const providers = {
+  googleProvider: new firebase.auth.GoogleAuthProvider()
+};
+
 const styles = StyleSheet.create({
   containerForm: {
     backgroundColor: "#c1ddbf",
@@ -148,7 +186,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     width: "inherit",
     textAlign: "center",
-    margin: "2vh 0 1vh 0",
+    margin: "0vh 0 2vh 0",
     fontSize: "3vh"
   },
   buttonStyle: {
@@ -163,6 +201,26 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     fontSize: "3vw",
     marginTop: "2vh"
+  },
+  googleButton: {
+    width: "45px",
+    marginTop: "7px",
+    marginRight: "20px"
+  },
+  facebookButton: {
+    width: "45px",
+    marginTop: "7px"
+  },
+  separationLine: {
+    backgroundColor: "#1a1a1a",
+    border: "transparent",
+    height: "3px",
+    width: "90%",
+    margin: "0 auto 7px auto",
+    borderRadius: "50px"
   }
 });
-export default Registry;
+export default withFirebaseAuth({
+  providers,
+  firebaseAppAuth
+})(Registry);
